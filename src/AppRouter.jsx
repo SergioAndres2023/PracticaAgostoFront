@@ -8,7 +8,7 @@ function AppRouter() {
     [
       {
         element: <Home />,
-        path: '/home',
+        path: '/',
       },
     ]
   );
