@@ -1,0 +1,72 @@
+/* Estilos para el contenedor principal */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 20px 40px; /* Espaciado lateral en pantallas más grandes */
+  }
+}
+
+/* Estilos para las imágenes compartidas */
+
+.shared-images {
+  display: flex;
+  flex-wrap: wrap; /* Alinea las imágenes en una fila y permite envolverlas */
+  justify-content: space-between;
+  margin-bottom: 20px; /* Espaciado inferior en todas las pantallas */
+}
+
+.shared-image {
+  background-color: #f5f5f5; /* Color gris claro */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Sombreado suave */
+  padding: 10px; /* Espaciado interior */
+  text-align: center;
+  margin-right: 20px; /* Espaciado derecho entre las imágenes compartidas */
+  flex: 1; /* Hace que las imágenes compartidas se ajusten al espacio disponible */
+  max-width: calc(50% - 20px); /* Limita el ancho al 50% del contenedor con espacio entre las imágenes */
+  min-width: 250px; /* Ancho mínimo para evitar que se hagan demasiado pequeñas */
+}
+
+@media (min-width: 768px) {
+  .shared-images {
+    justify-content: flex-start; /* Alínea las imágenes compartidas a la izquierda en pantallas más grandes */
+  }
+}
+
+/* Estilos para el componente Card Responsivo */
+.card {
+  width: 100%; /* Ajusta el ancho del componente Card al 100% */
+  margin-bottom: 20px;
+}
+
+.card-img-container {
+  position: relative; /* Para permitir la superposición de elementos internos */
+  width: 100%; /* Ajusta el ancho del contenedor de la imagen al 100% */
+  padding: 20px; /* Espaciado interior */
+  text-align: center;
+  overflow: hidden; /* Evita que el contenido se desborde del contenedor */
+}
+
+.card-img {
+  max-width: 100%; /* Asegura que la imagen sea responsive */
+  height: auto;
+}
+
+/* Estilo para el marco Polaroid (rectángulo gris) */
+.polaroid-frame {
+  background-color: #f5f5f5; /* Color gris claro */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Sombreado suave */
+  position: absolute;
+  top: 10px; /* Ajusta la posición del marco dentro del contenedor */
+  left: 10px; /* Ajusta la posición del marco dentro del contenedor */
+  right: 10px; /* Ajusta la posición del marco dentro del contenedor */
+  bottom: 10px; /* Ajusta la posición del marco dentro del contenedor */
+}
+
